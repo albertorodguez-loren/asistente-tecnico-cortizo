@@ -9,7 +9,7 @@ import os
 st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="favicon.png")
 
 # Mostramos el logo centrado y con un ancho que se vea bien (ajusta el width si quieres)
-st.image("GetPrefWebHeaderLogo.png", width=350) 
+st.image("logo_cortizo.png", width=350) 
 
 st.title("Asistente Técnico Cortizo Cloud")
 st.markdown("---") # Una línea divisoria para dar elegancia
