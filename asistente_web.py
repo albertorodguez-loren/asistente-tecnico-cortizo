@@ -3,13 +3,21 @@ import google.generativeai as genai
 import PyPDF2
 import os
 
-# En la sección de CONFIGURACIÓN DE LA INTERFAZ
-col1, col2 = st.columns([1, 4]) # Creamos dos columnas
-with col1:
-    st.image("logo_cortizo.png", width=100) # Muestra el logo (ajusta el nombre del archivo)
-with col2:
-    st.title("Asistente Técnico Cortizo Cloud") # Título al lado del logo
-    
+# =================================================================
+# CONFIGURACIÓN DE LA INTERFAZ (UI)
+# =================================================================
+st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="favicon.png")
+
+# Mostramos el logo centrado y con un ancho que se vea bien (ajusta el width si quieres)
+st.image("GetPrefWebHeaderLogo.png", width=350) 
+
+st.title("Asistente Técnico Cortizo Cloud")
+st.markdown("---") # Una línea divisoria para dar elegancia
+st.markdown("""
+Esta herramienta utiliza Inteligencia Artificial para resolver dudas técnicas 
+basándose exclusivamente en los manuales oficiales de la plataforma.
+""")
+
 # Configuración de la página
 #st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="🤖")
 st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="logo_cortizo_favicon.png") # Sube el logo a tu GitHub
