@@ -6,21 +6,12 @@ import os
 # =================================================================
 # CONFIGURACIÓN DE LA INTERFAZ (UI)
 # =================================================================
-st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="favicon.png")
 
-# Mostramos el logo centrado y con un ancho que se vea bien (ajusta el width si quieres)
+# Mostramos el logo centrado y con un ancho que se vea bien
 st.image("logo_cortizo.png", width=350) 
 
-#st.title("Asistente Técnico Cortizo Cloud")
-#st.markdown("---") # Una línea divisoria para dar elegancia
-#st.markdown("""
-#Esta herramienta utiliza Inteligencia Artificial para resolver dudas técnicas 
-#basándose exclusivamente en los manuales oficiales de la plataforma.
-#""")
-
 # Configuración de la página
-#st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="🤖")
-st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="logo_cortizo_favicon.png") # Sube el logo a tu GitHub
+st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="logo_cortizo_favicon.png")
 st.title("🤖 Asistente Técnico Cortizo Cloud")
 
 # --- LÓGICA DE IA ---
