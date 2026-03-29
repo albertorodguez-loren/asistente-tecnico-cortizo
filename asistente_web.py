@@ -15,13 +15,23 @@ model = genai.GenerativeModel('gemini-2.5-flash')
 
 @st.cache_resource
 def cargar_manuales():
+    """
+    Lee todos los PDFs de la carpeta 'manuales' y extrae el texto.
+    Usamos cache_resource para que solo se ejecute una vez y la web vaya rápida.
+    """
     texto_total = ""  
-    for archivo in os.listdir("."):
-        if archivo.endswith(".pdf"):
-            with open(archivo, "rb") as f:
-                lector = PyPDF2.PdfReader(f)
-                for pagina in lector.pages:
-                    texto_total += pagina.extract_text() + "\n"
+    carpeta_objetivo = "manuales" 
+    
+    # Verificamos que la carpeta existe para evitar que la app de error
+    if os.path.exists(carpeta_objetivo):
+        for archivo in os.listdir(carpeta_objetivo):
+            if archivo.endswith(".pdf"):
+                # Unimos la ruta de la carpeta con el nombre del archivo
+                ruta_completa = os.path.join(carpeta_objetivo, archivo)
+                with open(ruta_completa, "rb") as f:
+                    lector = PyPDF2.PdfReader(f)
+                    for pagina in lector.pages:
+                        texto_total += pagina.extract_text() + "\n"
     return texto_total
 
 conocimiento = cargar_manuales()
