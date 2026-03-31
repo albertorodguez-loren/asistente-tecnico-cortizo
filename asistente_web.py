@@ -26,11 +26,11 @@ def cargar_manuales():
     texto_total = ""
     for archivo in os.listdir("manuales"):
         if archivo.endswith(".pdf"):
-            with open(f"manuales/{archivo}", "rb") as f:
-                lector = PyPDF2.PdfReader(f)
-                for pagina in lector.pages:
-                    texto_total += pagina.extract_text() + "\n"
-    return texto_total
+            with open(f"manuales/{archivo}", "rb") as f:
+                lector = PyPDF2.PdfReader(f)
+                for pagina in lector.pages:
+                    texto_total += pagina.extract_text() + "\n"
+        return texto_total
 
 conocimiento = cargar_manuales()
 
