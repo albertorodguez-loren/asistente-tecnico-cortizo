@@ -24,8 +24,8 @@ model = genai.GenerativeModel('gemini-2.5-flash')
 @st.cache_resource
 def cargar_manuales():
     texto_total = ""
-    for archivo in os.listdir("manuales"):
-        if archivo.endswith(".pdf"):
+    for archivo in os.listdir("manuales"):
+        if archivo.endswith(".pdf"):
             with open(f"manuales/{archivo}", "rb") as f:
                 lector = PyPDF2.PdfReader(f)
                 for pagina in lector.pages:
