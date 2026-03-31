@@ -23,7 +23,7 @@ model = genai.GenerativeModel('gemini-2.5-flash')
 # Usamos @st.cache_resource para que los PDFs solo se lean una vez al arrancar, ahorrando memoria.
 @st.cache_resource
 def cargar_manuales():
-    texto_total = ""  
+    texto_total = ""
     for archivo in os.listdir("manuales"):
         if archivo.endswith(".pdf"):
             with open(f"manuales/{archivo}", "rb") as f:
