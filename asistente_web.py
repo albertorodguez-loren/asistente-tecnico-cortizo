@@ -49,10 +49,10 @@ if prompt := st.chat_input("¿En qué puedo ayudarte con Cortizo Cloud?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-
-    # Respuesta de la IA
-    with st.chat_message("assistant"):
-        contexto_instruccion = f"Eres un experto en Cortizo Cloud. Usa este manual: {conocimiento}. Responde a: {prompt}"
-        response = st.session_state.chat.send_message(contexto_instruccion)
-        st.markdown(response.text)
-        st.session_state.messages.append({"role": "assistant", "content": response.text})                                 la direccion del chatbot con ia generativa es https://asistente-tecnico-cortizo.streamlit.app
+        
+# Respuesta de la IA
+    with st.chat_message("assistant"):
+        contexto_instruccion = f"Eres un experto en Cortizo Cloud. Usa este manual: {conocimiento}. Responde a: {prompt}"
+        response = st.session_state.chat.send_message(contexto_instruccion)
+        st.markdown(response.text)
+        st.session_state.messages.append({"role": "assistant", "content": response.text})
