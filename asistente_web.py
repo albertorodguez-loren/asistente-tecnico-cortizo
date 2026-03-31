@@ -18,7 +18,7 @@ st.title("🤖 Asistente Técnico Cortizo Cloud")
 # Por seguridad, la API KEY no se escribe aquí; se gestiona desde el panel de Secrets de la nube.
 api_key_segura = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key_segura)
-model = genai.GenerativeModel('gemini-2.5-flash') 
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # Usamos @st.cache_resource para que los PDFs solo se lean una vez al arrancar, ahorrando memoria.
 @st.cache_resource
