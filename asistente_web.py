@@ -11,7 +11,7 @@ import os
 st.set_page_config(page_title="Asistente Cortizo Cloud", page_icon="logo_cortizo_favicon.png")
 
 # Mostramos el logo centrado y con un ancho que se vea bien
-st.image("logo_cortizo.png", width=350) 
+st.image("logo_cortizo.png", width=350) 
 st.title("🤖 Asistente Técnico Cortizo Cloud")
 
 # --- LÓGICA DE IA ---
