@@ -36,19 +36,19 @@ conocimiento = cargar_manuales()
 
 # Inicializar historial de chat
 if "messages" not in st.session_state:
-    st.session_state.messages = []
-    st.session_state.chat = model.start_chat(history=[])
+    st.session_state.messages = []
+    st.session_state.chat = model.start_chat(history=[])
 
 # Mostrar mensajes previos
 for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
 # Input del usuario
 if prompt := st.chat_input("¿En qué puedo ayudarte con Cortizo Cloud?"):
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
-        st.markdown(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
 
     # Respuesta de la IA
     with st.chat_message("assistant"):
